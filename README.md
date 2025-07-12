@@ -417,4 +417,4 @@ SOFTWARE.
 
 **⚽ Made with ❤️ for football fans everywhere**
 
-*This application is for educational and demonstration purposes. All football data is provided by Football-Data.org API.* 
+*This application is for educational and demonstration purposes. All football data is provided by Football-Data.org API.*
