@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/teamLogoImageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/teamNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Team Name"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="24dp" />
+
+        <TextView
+            android:id="@+id/teamPositionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Current Position: "
+            android:layout_gravity="center"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/teamPointsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Points: "
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/WinsTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="1"
+                android:text="Wins"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/DrawsTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="1"
+                android:text="Draws"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/LossesTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="1"
+                android:text="Losses"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/teamWinsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:textColor="#058005"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/teamDrawsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:textColor="#EAA221"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/teamLossesTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:textColor="#900505"
+                android:textSize="18sp" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/teamGoalsForTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Goals Scored: "
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="4dp"/>
+
+        <TextView
+            android:id="@+id/teamGoalsAgainstTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Goals Conceded: "
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="4dp"/>
+
+        <TextView
+            android:id="@+id/teamGoalDifferenceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Average: "
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="4dp"/>
+
+        <TextView
+            android:id="@+id/upcomingMatchesLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:layout_marginTop="8dp"
+            android:text="Upcoming Matches"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/upcomingMatchesRecyclerView"
+            android:layout_marginTop="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"/>
+
+
+
+    </LinearLayout>
+
+</ScrollView>

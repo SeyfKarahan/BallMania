@@ -1,0 +1,71 @@
+plugins {
+    alias(libs.plugins.android.application)
+}
+
+android {
+    namespace 'com.example.ballmania'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId "com.example.ballmania"
+        minSdk 24
+        targetSdk 35
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        
+        // API Key configuration
+        buildConfigField "String", "FOOTBALL_API_KEY", "\"${getApiKey()}\""
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            // ProGuard disabled - no obfuscation or optimization
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+}
+
+// Function to get API key from properties or environment variable
+def getApiKey() {
+    def apiKey = project.findProperty('FOOTBALL_API_KEY')
+    if (apiKey == null) {
+        apiKey = System.getenv('FOOTBALL_API_KEY')
+    }
+    if (apiKey == null) {
+        throw new RuntimeException("FOOTBALL_API_KEY not found. Please set it in gradle.properties or as an environment variable.")
+    }
+    return apiKey
+}
+
+dependencies {
+
+    implementation libs.appcompat
+    implementation libs.material
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+
+
+
+    implementation libs.retrofit
+    implementation libs.converter.gson
+    // For handling asynchronous requests
+    implementation libs.lifecycle.livedata.ktx
+    implementation libs.lifecycle.viewmodel
+    // RecyclerView
+    implementation libs.recyclerview.v121
+    // ConstraintLayout
+    implementation libs.constraintlayout
+    implementation libs.glide
+    annotationProcessor libs.compiler
+    implementation libs.gson
+
+
+
+}

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:background="@drawable/border"
+    android:orientation="horizontal"
+    android:layout_margin="4dp"
+    android:padding="4dp">
+
+    <TextView
+        android:id="@+id/teamPositionTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/teamLogoImageView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="8dp" />
+
+
+    <TextView
+        android:id="@+id/teamNameTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:gravity="start"
+        android:paddingStart="8dp"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/teamWinTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="#058005"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/teamDrawTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="#EAA221"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/teamLoseTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="#900505"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/teamPointsTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="16sp" />
+
+</LinearLayout>
